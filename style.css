@@ -336,10 +336,6 @@ main{
     text-align: center;
     
 }
-.thank_title span{
-    font-weight: 700;
-}
-
 .attribution 
 { 
     font-size: 0.55em;
@@ -486,5 +482,43 @@ body{
 }
 .hidden{
     display: none;
+}
+    .container3{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: white;
+    color: hsl(234, 29%, 20%);
+    margin: auto;
+    font-family: 'Space Grotesk';
+    
+}
+
+.thank{
+    display: flex;
+    place-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+.thank_title{
+    text-align: center;
+    color: hsl(234, 29%, 20%);
+    margin: 0.5rem 0;
+    
+}
+.thank_title h1{  
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    text-align: center;
+}
+.thank_title p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: hsl(249, 10%, 26%, 0.7);
+    padding: 0.5rem 0rem;
+    line-height: 1.3rem;
+    text-align: center;
+    
 }
 }
