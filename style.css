@@ -522,3 +522,53 @@ body{
     
 }
 }
+
+@media only screen and (min-width:1440px){
+
+    
+.img1{
+    width: 95%;
+    position: absolute;
+    top: 267px;
+    transform: translateX(47%);
+    margin-bottom: 1.3rem;
+    z-index: 1;
+   
+}
+.img1 img{
+    width: 95%;
+}
+.img2{
+    width: 95%;   
+    position: relative; 
+    transform: translateX(80%);
+    top: 345px;
+   
+}
+.img2 img{
+    width: 95%;
+}
+.card-logo{
+    
+    z-index: 1;
+    position: relative;
+    top: 283px;
+    transform: translateX(53%);
+    color: hsl(0, 0%, 100%);    
+
+
+}
+
+.cvcOnCard{
+    
+    font-size: 0.8rem;
+    position: relative;
+    transform: translateX(206%);
+    top: 232px;
+    z-index: 1;
+    text-align: end;
+    width: 50%;
+    color: hsl(0, 0%, 100%);
+}
+
+}
