@@ -60,4 +60,15 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
+- Linear-gradient and border radius for input focus
+- Mobile-responsive workflow
+- Javascript
+- preventdefault
+- replace
+- match
+- test
+- addeEventListener
+- IfElse
+- Foreach
+- which
+- 
