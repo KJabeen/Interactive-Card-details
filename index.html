@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive-Card-Detail</title>
+
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main>
+        <div class="container">
+            <div class="container1">
+                <div class="img1">
+                  <img src="./images/bg-card-front.png" alt="bg-card-front">
+                </div>
+                <div class="card-logo">
+                  <img src="./images/card-logo.svg" alt="">
+                  <div class="card-details">
+                    <h1 class="numberOnCard">0000 0000 0000 0000</h1>
+                    <div class="info">
+                      <h2 class="nameOnCard">JANE APPLESEND</h2>
+                      <h2 class="dateOnCard">00/00</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="img2"><img src="./images/bg-card-back.png" alt="bg-card-back"></div>
+                <div class="cvcOnCard">
+                  <h3>000</h3>
+                </div>
+            </div>
+            <div class="container2">
+                               
+              <div class="field-container ">
+                    <form id="form" name="myform" action="" method="get">
+                    
+                        <div class="field-group">
+                            <label for="cardHolderName">CARD HOLDER NAME</label>
+                            <input id="chname" name="Name" type="text" placeholder="e.g. Jane Applesend" type="submit">
+                            <p id="full-name" class="error-text" >Card Holder Name cannot be empty</p>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="cardnumber">CARD NUMBER</label>
+                            <input id="cardnumber" name="card" type="text" placeholder="e.g. 1234 5678 9123 0000" type="submit" onkeypress="return checkDigit(event)">
+                            <p id="cardformat" class="error-text" >Wrong format, numbers only</p>
+                        </div>
+                          <div class="date-cvc">
+                            <div id="expireDt" class="field-group">
+                                <!-- <div> -->
+                                  <label for="expireDate">EXP. DATE (MM/YY)</label>
+                                <!-- </div> -->
+                                <div class="field-group card-date">
+
+                                  <!-- <div> -->
+                                    <input id="month" name="cardmonth" type="number" placeholder="MM" type="submit">
+                                    <input id="year" name="cardyear" type="number" placeholder="YY" type="submit">
+                                    
+                                    <p id="dt-yr" class="error-text" >Can't be blank</p>
+                                    <!-- <input id="year" name="year" type="number" placeholder="YY" type="submit">
+                                    <p class="error-text" >Enter Valid year</p> -->
+                                  
+                                  <!-- </div> -->
+                         
+                                  <!-- <div> -->
+                                    <!-- <input id="year" name="cardyear" type="number" placeholder="YY" type="submit">
+                                     -->
+                                  <!-- </div> -->
+                                </div>
+                                <!-- <p id="dt-yr" class="error-text" >Can't be blank</p> -->
+                            </div>
+                            <div class="field-group cvc-box">
+                              <label for="c-v-c">CVC</label>
+                              <input id="cvc" name="cvcnum" type="text" placeholder="e.g. 123" type="submit">
+                              <p id="cardcvc" class="error-text" >Can't be blank</p>
+                            </div>
+                          </div>
+                   
+                        <button class="btn" type="submit" >Confirm</button>
+                </form>
+              </div>
+            
+          
+       
+         <!-- =================Thanks Page===================== -->
+         <div class="container3 hidden">
+           
+          <div class="thank">
+              <img class="thankyou" src="./images/icon-complete.svg" alt="">
+          </div>
+          
+          <div class="thank_title">
+                  <h1>
+                    THANK YOU!
+                  </h1>
+                  <p>
+                    We've added your card details
+                  </p>
+                  <button id="continue" class="btn" type="button" onclick="">Continue</button>
+                     
+              </div>
+     
+
+  </div>
+</div>
+       
+</div>
+    </main>
+    <script src="index.js"></script>
+    <footer>
+      <hr>
+        <div class="attribution ">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+            Coded By
+            <a href="https://github.com/KJabeen">KJabeen</a>
+        </div>
+    </footer>
+</body>
+</html>
+  

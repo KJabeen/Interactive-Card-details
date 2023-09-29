@@ -1,0 +1,490 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    /* Colors */
+
+    /* Primary */
+    /* (active input border)
+    --Lineargradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); */
+
+    --Voilet: hsl(278, 94%, 30%);
+    --bluishVoilet: hsl(249, 99%, 64%) ;
+
+
+    /* input errors */
+    --Red: hsl(0, 100%, 66%); 
+
+    /* Neutral */
+  
+    --White: hsl(0, 0%, 100%);
+    --Lightgrayishviolet: hsl(270, 3%, 87%);
+    --Darkgrayishviolet: hsl(279, 6%, 55%);
+    --Verydarkviolet: hsl(278, 68%, 11%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* border: 4px solid red; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    
+}
+
+main{
+    /* border: 4px solid black; */
+    width: 100%;
+    height: 97.5%;
+}
+
+.container{
+    /* border: 4px solid green; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Space Grotesk';
+    margin: auto;
+}
+
+.container1{
+    /* border: 4px solid yellow; */
+    width: 40%;
+    height: 100%;
+    padding: 0.7rem;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    background: url('./images/bg-main-desktop.png');
+    object-fit: cover;
+    position: relative;
+}
+.img1{
+    /* width: 100%;    */
+    position: relative;
+    top: 50px;
+    transform: translateX(30%);
+    margin-bottom: 1.3rem;
+   
+}
+.img1 img{
+    width: 100%;
+}
+
+.img2 img{
+    width: 100%;
+}
+.card-logo{
+    
+    z-index: 1;
+    position: relative;
+    top: -28%;
+    transform: translateX(36%);
+    color: hsl(0, 0%, 100%);    
+
+}
+.card-details{
+    
+    width: 85%;
+ 
+}
+.card-logo h1{
+    font-size: 1.3rem; 
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    padding: 1.8rem 0rem;
+}
+.card-logo h2{
+    font-size: 0.8rem; 
+    font-weight: 100;
+    text-align: right;
+    letter-spacing: 0.1rem;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img2{
+    position: absolute;
+
+}
+.img2{
+    width: 95%;   
+    position: relative; 
+    transform: translateX(60%);
+    top: -100px;
+
+}
+.card-logo img{
+    width: 20%;
+}
+.cvcOnCard{
+   
+    font-size: 0.7rem;
+    position: relative;
+    transform: translateX(100%);
+    top: -209px;
+    z-index: 1;
+    text-align: end;
+    width: 70%;
+    color: hsl(0, 0%, 100%);
+}
+.container2{
+    /* border: 4px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    place-content: center;
+    
+}
+
+
+.field-container{
+    /* border: 2px solid red; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.field-group{
+    padding: 0.5rem;
+}
+.field-group label{
+    color: hsl(249, 10%, 26%);
+    padding: 1rem 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.field-container input{
+    width: 100%;
+    padding: 0.5rem ;
+    border-radius: 7px;
+    border: 1px solid hsl(249, 10%, 26%,0.6);
+    cursor: pointer;
+    
+}
+.field-group  input:focus{
+    
+    /* border-image: linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-image-slice: 1;
+    border-radius: 7px;
+    background-clip: padding-box, border-box;
+    outline: none; */
+ 
+    /* above code doesn't allow border-radius input:focus, gradient and 
+    border-radius aretogether are tricky */
+    
+    border: double 2px transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    outline: none;    
+}
+
+.field-group input::placeholder{
+    color: hsl(249, 10%, 26%, 0.6);
+    font-size: 1rem;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+}
+.error{
+    display: block;
+}
+.error-text{
+    display: none;
+}
+
+.field-group.error .error-text{
+    display: block;
+}
+.field-group.error input{
+    border: 2px solid var(--Red);
+}
+
+.error-text{
+    
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--Red);
+    text-align:start;
+    padding: 0.15rem;
+    
+}
+.date-cvc{
+    display: flex;
+    flex-direction: row;
+}
+#month{
+    width: 4.5rem;
+}
+#year{
+    width: 4.5rem;
+}
+
+#expireDt{
+    
+    
+    /* display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 0.1px; */
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 0px;
+    
+
+}
+#expireDt label{
+    padding: 0 0 0 0.3rem;
+
+}
+
+.card-date{
+    
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 0.5px;
+    grid-column-gap: 0.5rem ;
+    padding: 0;
+    
+}
+.cvc-box{
+    margin-bottom: 0.1rem;
+}
+.btn{
+    width: 97%;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+}
+.btn1{
+    display: none;
+}
+
+.hide{
+    display: block;
+}
+
+.container3{
+    width: 45%;
+    padding: 1.7rem;
+    border-radius: 15px;
+    background-color: white;
+    color: hsl(234, 29%, 20%);
+    margin: auto;
+    font-family: 'Space Grotesk';
+    
+}
+.hidden{
+    display: none;
+}
+
+.thank{
+    display: flex;
+    place-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+.thank_title{
+    text-align: center;
+    color: hsl(234, 29%, 20%);
+    margin: 0.5rem 0;
+    
+}
+.thank_title h1{
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    text-align: center;
+}
+.thank_title p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: hsl(249, 10%, 26%, 0.7);
+    padding: 0.5rem 0rem;
+    line-height: 1.3rem;
+    text-align: center;
+    
+}
+.thank_title span{
+    font-weight: 700;
+}
+
+.attribution 
+{ 
+    font-size: 0.55em;
+    text-align: center; 
+    margin: auto;
+    /* position: relative;
+    bottom: -15px; */
+    color: var(--VeryDarkGrayishBlue);
+    font-family: 'Space Grotesk';
+    font-weight: 200;
+}
+footer {
+    width: 100%;
+    
+}
+.attribution a 
+{ 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+@media only screen and (max-width:425px){
+body{
+    width: 100vw;
+    height: fit-content;
+
+}
+.container{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+    
+}
+.container1{
+    
+    width: 100%;
+    padding: 0.7rem;
+    
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    background: url('./images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-size:contain ;
+    height: fit-content;
+    
+    position: relative;
+}
+
+
+.img1{
+    width: 95%;
+    position: absolute;
+    top: 150px;
+    transform: translateX(0%);
+    margin-bottom: 1.3rem;
+    z-index: 1;
+   
+}
+.img1 img{
+    width: 85%;
+}
+.img2{
+    width: 95%;   
+    position: relative; 
+    transform: translateX(19%);
+    top: -85px;
+   
+}
+.img2 img{
+    width: 85%;
+}
+.card-logo{
+    
+    z-index: 1;
+    position: relative;
+    top: 155px;
+    transform: translateX(6%);
+    color: hsl(0, 0%, 100%);    
+
+
+}
+.card-details{
+    
+    width: 75%;
+ 
+}
+.card-logo h1{
+    font-size: 0.9rem; 
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    padding: 1.8rem 0rem;
+}
+.card-logo h2{
+    font-size: 0.6rem; 
+    font-weight: 100;
+    text-align: right;
+    letter-spacing: 0.1rem;
+}
+.card-logo img{
+    width: 17%;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cvcOnCard{
+    
+    font-size: 0.6rem;
+    position: relative;
+    transform: translateX(80%);
+    top: -179px;
+    z-index: 1;
+    text-align: end;
+    width: 50%;
+    color: hsl(0, 0%, 100%);
+}
+.container2{
+    
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+    align-items: center;
+    place-content: center;
+    
+}
+
+.field-container{
+    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.hidden{
+    display: none;
+}
+}
